@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    #cursor_underline{
+        cursor :pointer;
+        text-decoration : underline;
+        text-decoration-color: rgb(149, 46, 46);
+    }
+</style>
+<body>
+    <div id="table-holder">
+
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Rollno</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Address</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody id ="table-data">
+            
+          
+        </tbody>
+      </table>
+
+
+
+    
+</body>
+
+
+
+<script>
+    var students=[
+        {
+           name:"sahla",
+           rollno:1,
+           dept: "cse",
+           add:"ajkhh",
+           xy:"deleted"
+            
+        },
+        {
+           name:"Sana",
+           rollno:2,
+           dept: "cse",
+           add:"gygiuhk",
+            xy:"deleted"
+        },
+        {
+           name:"sahla",
+           rollno:1,
+           dept: "cse",
+           add:"ygiuh",
+            xy:"deleted"
+        }
+
+    ];
+    for(i=0;i<students.length;i++){
+        var rollno= students[i].rollno;
+        var name= students[i].name;
+        var dept= students[i].dept;
+        var add= students[i].add;
+        var xy= students[i].xy;
+        console.log(students[i].rollno);
+    $("#table-data").append(`
+    <tr>
+        <td>${rollno}</td>
+        <td>${name}</td>
+        <td>${dept}</td>
+        <td>${add}</td>
+        <td id="cursor_underline" class="dlzt">${xy}</td>
+
+    </tr>`);}
+    $(".dlzt").click(function (){
+        alert("alert");
+    });
+
+
+
+
+
+</script>
+</html>
